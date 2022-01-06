@@ -16,7 +16,7 @@ fs.writeFile('myfile.json', data, (err) => {
 });
 
 
-fs.readFile('user.json', 'utf-8', (err, data) => {
+fs.readFile('myfile.json', 'utf-8', (err, data) => {
     if (err) {
         throw err;
     }
