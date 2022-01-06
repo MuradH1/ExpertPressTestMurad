@@ -12,8 +12,16 @@ fs.writeFile('myfile.json', data, (err) => {
     if (err) {
         throw err;
     }
-    console.log("File created.");
+    console.log("JSON data is saved.");
 });
 
 
-const infile = JSON.parse(fs.fileReadSync("myfile.json").toString())
+fs.readFile('user.json', 'utf-8', (err, data) => {
+    if (err) {
+        throw err;
+    }
+
+    const infile = JSON.parse(data.toString());
+
+    console.log(infile);
+});
